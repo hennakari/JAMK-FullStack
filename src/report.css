@@ -1,0 +1,34 @@
+#tapahtumat,
+#tyokalut {
+  border-collapse: collapse;
+  width: 80%;
+  margin: 10px auto;
+  font-size: 1rem;
+}
+
+#tapahtumat td,
+#tapahtumat th,
+#tyokalut td,
+#tyokalut th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#tapahtumat tr:nth-child(even),
+#tyokalut tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#tapahtumat tr:hover,
+#tyokalut tr:hover {
+  background-color: #ddd;
+}
+
+#tapahtumat th,
+#tyokalut th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #a39dd4;
+  color: white;
+}
