@@ -12,11 +12,9 @@ const Record = (props) => (
     <td>{props.record.diary_hours}</td>
     <td>{props.record.diary_cat}</td>
     <td>{props.record.diary_task}</td>
-    {/* <td>{props.record.diary_tutor}</td> */}
     <td>{props.record.diary_feedback}</td>
     <td>{props.record.diary_feel}</td>
     <td>{props.record.diary_note}</td>
-    {/* <td>{props.record.person_level}</td> */}
     <td>
       <Link to={"/edit/" + props.record._id}>Edit</Link> |
       <a
@@ -33,7 +31,7 @@ const Record = (props) => (
 
 
 export default class RecordList extends Component {
-  // This is the constructor that shall store our data retrieved from the database
+  // Constructor stores the data retrieved from the database
   constructor(props) {
     super(props);
     this.deleteRecord = this.deleteRecord.bind(this);
@@ -91,18 +89,14 @@ export default class RecordList extends Component {
               <th>Tunnit</th>
               <th>Kategoria</th>
               <th>Työtehtävät</th>
-              {/* <th>Ohjaaja</th> */}
               <th>Palaute</th>
               <th>Oma fiilis</th>
               <th>Kommentit</th>
               <th>Action</th>
-
             </tr>
           </thead>
           <tbody>{this.recordList()}</tbody>
         </table>
-        
-        {/* <h4>{this.recordItem()}</h4> */}
       </div>
     );
   }

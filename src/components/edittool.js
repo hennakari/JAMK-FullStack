@@ -1,11 +1,10 @@
 import React, { Component } from "react";
-// This will require to npm install axios
 import axios from 'axios';
 import { withRouter } from "react-router";
 import "../form.css"
  
 class EditTool extends Component {
-  // This is the constructor that stores the data.
+  // Constructor stores the data.
   constructor(props) {
     super(props);
  
@@ -124,8 +123,5 @@ class EditTool extends Component {
     );
   }
 }
- 
-// You can get access to the history object's properties and the closest <Route>'s match via the withRouter
-// higher-order component. This makes it easier for us to edit our records.
  
 export default withRouter(EditTool);

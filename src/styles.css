@@ -25,62 +25,8 @@ body {
   font-size: 2rem;
 }
 
-.chart-container {
-  width: 80%;
-  display: block;
-  margin: 0 auto;
-}
-
-.content-dashboard {
-  border: 2px dotted blue;
-  background: #a39dd4;
-}
-
-.layout {
-  border: 1px solid red;
-  background: white;
-  width: 80%;
-  display: block;
-  margin: 0 auto;
-}
 .ruutu {
   box-shadow: 0 2px 2px 0 #a39dd4, 0 0px 6px 0 #a39dd4;
-  /* box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 0px 6px 0 rgba(0, 0, 0, 0.19); */
   align-items: center;
   text-align: center;
 }
-
-.kommentit {
-  font-size: 0.6rem;
-}
-
-.demokontti {
-  border: 1px solid green;
-  width: 80%;
-}
-
-/*chart-1
-#chartcd7c426b-2a93-45ce-8870-caf210098ebe,
-#charte2aa4cfa-d6ff-4bb7-9107-f02a1fa5d66a,
-#chart8392c116-f2a2-4b70-830d-0b4a89b15f8c,
-#chart3039d3c0-a55f-4229-9df9-589254a643df {
-  border: 1px dotted palevioletred;
-}
-
-/*chart-2
-#chart1b15e847-bdb6-4139-a1e7-938c714c4a87,
-#charta03eb9ee-f79b-4547-b7eb-64558a87b7c6 {
-  border: 1px dotted blueviolet;
-}
-
-/*chart-3
-#chart75ddbab3-a823-4b0d-8946-c265ea2c6d7b,
-#chart41268173-ee6c-4a73-875d-173cf002cf21 {
-  border: 1px dotted goldenrod;
-}
-
-/*chart-4
-#chart8f9f9ec6-cc89-44a5-ae4f-6c5534f65b1c,
-#chart0bb41bab-cb61-4900-a341-6bf0f0747638 {
-  border: 1px dotted lime;
-} */

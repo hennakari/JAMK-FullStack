@@ -15,7 +15,6 @@
   justify-content: right;
   align-items: center;
   height: 10vh;
-  /* max-width: 1500px; */
   width: 100%;
 }
 
@@ -25,7 +24,6 @@ ul.nav-menu {
 
 .navbar-logo {
   color: #f075a8;
-  /* justify-self: start; */
   margin-left: 1rem;
   cursor: pointer;
   text-decoration: none;

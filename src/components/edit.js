@@ -1,11 +1,10 @@
 import React, { Component } from "react";
-// This will require to npm install axios
 import axios from 'axios';
 import { withRouter } from "react-router";
 import "../form.css"
  
 class Edit extends Component {
-  // This is the constructor that stores the data.
+  // Constructor stores the data.
   constructor(props) {
     super(props);
  
@@ -14,11 +13,9 @@ class Edit extends Component {
     this.onChangeDiaryHours = this.onChangeDiaryHours.bind(this);
     this.onChangeDiaryCat = this.onChangeDiaryCat.bind(this);
     this.onChangeDiaryTask = this.onChangeDiaryTask.bind(this);
-    // this.onChangeDiaryTutor = this.onChangeDiaryTutor.bind(this);
     this.onChangeDiaryFeedback = this.onChangeDiaryFeedback.bind(this);
     this.onChangeDiaryFeel = this.onChangeDiaryFeel.bind(this);
     this.onChangeDiaryNote = this.onChangeDiaryNote.bind(this);
-    // this.onChangePersonLevel = this.onChangePersonLevel.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
  
     this.state = {
@@ -27,11 +24,9 @@ class Edit extends Component {
       diary_hours: "",
       diary_cat: "",
       diary_task: "",
-      // diary_tutor: "",
       diary_feedback: "",
       diary_feel: "",
       diary_note: "",
-      // person_level: "",
       records: [],
     };
   }
@@ -46,11 +41,9 @@ class Edit extends Component {
           diary_hours: response.data.diary_hours,
           diary_cat: response.data.diary_cat,
           diary_task: response.data.diary_task,
-          // diary_tutor: response.data.diary_tutor,
           diary_feedback: response.data.diary_feedback,
           diary_feel: response.data.diary_feel,
           diary_note: response.data.diary_note,
-          // person_level: response.data.person_level,
         });
       })
       .catch(function (error) {
@@ -89,12 +82,6 @@ class Edit extends Component {
     });
   }
 
-  // onChangeDiaryTutor(e) {
-  //   this.setState({
-  //     diary_tutor: e.target.value,
-  //   });
-  // }
-
   onChangeDiaryFeedback(e) {
     this.setState({
       diary_feedback: e.target.value,
@@ -112,13 +99,6 @@ class Edit extends Component {
       diary_note: e.target.value,
     });
   }
- 
-//   onChangeDiaryLevel(e) {
-//     this.setState({
-//       diary_level: e.target.value,
-//     });
-//   }
-
   
  
   // This function will handle the submission.
@@ -130,11 +110,9 @@ class Edit extends Component {
       diary_hours: this.state.diary_hours,
       diary_cat: this.state.diary_cat,
       diary_task: this.state.diary_task,
-      // diary_tutor: this.state.diary_tutor,
-      diary_feedback: this.state.diary_feedback,
+       diary_feedback: this.state.diary_feedback,
       diary_feel: this.state.diary_feel,
       diary_note: this.state.diary_note,
-      // person_level: this.state.person_level,
     };
     console.log(newEditedrecord);
  
@@ -250,8 +228,5 @@ class Edit extends Component {
     );
   }
 }
- 
-// You can get access to the history object's properties and the closest <Route>'s match via the withRouter
-// higher-order component. This makes it easier for us to edit our records.
  
 export default withRouter(Edit);

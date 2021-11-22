@@ -11,12 +11,6 @@ const Chart = ({chartId, height, width}) => {
     chart.render(chartDiv.current).then(() => setRendered(true)).catch(err => console.log("Error during Charts rendering.", err));
   });
 
-//   useEffect(() => {
-//     // if (rendered) {
-//     //   chart.setFilter(filter).catch(err => console.log("Error while filtering.", err));
-//     // }
-//   }, [chart, filter, rendered]);
-
   return <div className="chart" id={"chart"+chartId} ref={chartDiv}/>;
 };
 

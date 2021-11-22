@@ -1,13 +1,11 @@
 import React, { Component } from "react";
-// This will require to npm install axios
 import axios from 'axios';
-//import { FormControl, FormLabel, Input, VStack, Heading, Text, SimpleGrid, GridItem, Select, Checkbox, Button, useBreakpointValue } from '@chakra-ui/react';
 import "../form.css"
 
   
 
 export default class Addtool extends Component {
-  // This is the constructor that stores the data.
+  // Constructor stores the data.
   constructor(props) {
     super(props);
  
@@ -47,7 +45,7 @@ export default class Addtool extends Component {
   onSubmit(e) {
     e.preventDefault();
  
-    // When post request is sent to the create url, axios will add a new record(newperson) to the database.
+    // When post request is sent to the create url, axios will add a new record(newtool) to the database.
     const newtool = {
       tool_name: this.state.tool_name,
       tool_hours: this.state.tool_hours,
@@ -101,10 +99,8 @@ export default class Addtool extends Component {
               onChange={this.onChangeToolHours}
             />
 
-
           </div>
                    
-
             <button
               type="submit"
               value="Lisää työkalu"

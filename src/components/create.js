@@ -1,10 +1,9 @@
 import React, { Component } from "react";
-// This will require to npm install axios
 import axios from 'axios';
 import "../form.css"
  
 export default class Create extends Component {
-  // This is the constructor that stores the data.
+  // Constructor stores the data.
   constructor(props) {
     super(props);
  
@@ -13,11 +12,9 @@ export default class Create extends Component {
     this.onChangeDiaryHours = this.onChangeDiaryHours.bind(this);
     this.onChangeDiaryCat = this.onChangeDiaryCat.bind(this);
     this.onChangeDiaryTask = this.onChangeDiaryTask.bind(this);
-    // this.onChangeDiaryTutor = this.onChangeDiaryTutor.bind(this);
     this.onChangeDiaryFeedback = this.onChangeDiaryFeedback.bind(this);
     this.onChangeDiaryFeel = this.onChangeDiaryFeel.bind(this);
     this.onChangeDiaryNote = this.onChangeDiaryNote.bind(this);
-    // this.onChangeDiaryLevel = this.onChangeDiaryLevel.bind(this);
 
     this.onSubmit = this.onSubmit.bind(this);
  
@@ -27,11 +24,9 @@ export default class Create extends Component {
       diary_hours: "",
       diary_cat: "",
       diary_task: "",
-      // diary_tutor: "",
       diary_feedback: "",
       diary_feel: "",
       diary_note: "",
-    //   diary_level: "",
     };
   }
  
@@ -66,12 +61,6 @@ export default class Create extends Component {
     });
   }
 
-  // onChangeDiaryTutor(e) {
-  //   this.setState({
-  //     diary_tutor: e.target.value,
-  //   });
-  // }
-
   onChangeDiaryFeedback(e) {
     this.setState({
       diary_feedback: e.target.value,
@@ -90,12 +79,6 @@ export default class Create extends Component {
     });
   }
  
-//   onChangeDiaryLevel(e) {
-//     this.setState({
-//       diary_level: e.target.value,
-//     });
-//   }
- 
 // This function will handle the submission.
   onSubmit(e) {
     e.preventDefault();
@@ -107,11 +90,9 @@ export default class Create extends Component {
       diary_hours: this.state.diary_hours,
       diary_cat: this.state.diary_cat,
       diary_task: this.state.diary_task,
-      // diary_tutor: this.state.diary_tutor,
       diary_feedback: this.state.diary_feedback,
       diary_feel: this.state.diary_feel,
       diary_note: this.state.diary_note,
-    //   diary_level: this.state.diary_level,
     };
  
     axios
@@ -126,11 +107,9 @@ export default class Create extends Component {
         diary_hours: "",
         diary_cat: "",
         diary_task: "",
-        // diary_tutor: "",
         diary_feedback: "",
         diary_feel: "",
         diary_note: "",
-    //   diary_level: "",
     });
   }
  

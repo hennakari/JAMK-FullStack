@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flex, Container, Text, Divider, Heading, Spacer, Button } from '@chakra-ui/react';
+import { Flex, Container, Text, Divider, Heading, Spacer } from '@chakra-ui/react';
 import ChakraGrid from './chakragrid';
 import RecordItem from './recordItem';
 
@@ -11,7 +11,7 @@ const ChakraGridPage = () => {
             <Spacer />
             <Text align="center" fontSize="2xl">Harjoittelu Akamonilla 11.10.-14.12.2021</Text>
             <Divider className="divider" />
-            <Flex align="center" fontSize="2xl" direction="row" justifyContent="center" color="#5870CE"/*#f075a8"*/>
+            <Flex align="center" fontSize="2xl" direction="row" justifyContent="center" color="#5870CE">
                 <Text fontStyle="italic">" </Text>
                 <RecordItem />
                 <Text fontStyle="italic"> "</Text>

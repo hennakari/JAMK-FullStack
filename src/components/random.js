@@ -4,7 +4,7 @@ class RandomStrings extends Component {
     constructor (props) {
         super(props);
         this.state = {
-            sport: ''
+            miete: ''
         };
     }
 
@@ -12,7 +12,7 @@ class RandomStrings extends Component {
     componentDidMount () {
         setInterval(() => {
             const m = this.props.muuttuja[Math.floor(Math.random() *this.props.muuttuja.length)];
-            this.setState({ sport: m});
+            this.setState({ miete: m});
         }, 3000);
     }
 
@@ -21,7 +21,7 @@ class RandomStrings extends Component {
         return(
             <div>
                 <center>
-                    <h2 className="ajatus">{this.state.sport}</h2>
+                    <h2 className="ajatus">{this.state.miete}</h2>
                 </center>
             </div>
         );
