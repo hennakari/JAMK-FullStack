@@ -25,6 +25,7 @@ import theme from "./theme";
 import Login from "./components/login";
 import useToken from "./components/useToken";
 import Footer from "./components/footer";
+import RecordTool from "./components/recordTool";
 
 
 
@@ -76,6 +77,9 @@ const App = () => {
       <Route path="/addtool">
         <Addtool />
       </Route>
+      {/* <Route path="/toolhours">
+        <RecordTool />
+      </Route> */}
     </div>
     <Footer />
     </ChakraProvider>

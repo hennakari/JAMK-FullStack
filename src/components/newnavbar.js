@@ -42,7 +42,12 @@ function Navbar() {
                     <Link to='/addtool' className='nav-links' onClick={closeMobileMenu}>
                         Lisää työkalu
                     </Link>
-                    </li>     
+                    </li>
+                    {/* <li className='nav-item'>
+                    <Link to='/toolhours' className='nav-links' onClick={closeMobileMenu}>
+                        Työkalutunnit
+                    </Link>
+                    </li>      */}
                 </ul>
             </div>
         </nav>

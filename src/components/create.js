@@ -50,7 +50,7 @@ export default class Create extends Component {
 
   onChangeDiaryHours(e) {
     this.setState({
-      diary_hours: parseFloat(e.target.value),
+      diary_hours: (e.target.value),
     });
   }
 

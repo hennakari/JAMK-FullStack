@@ -34,3 +34,29 @@
   background-color: #a39dd4;
   color: white;
 }
+
+/* On screens that are 1070px or less */
+@media screen and (max-width: 1070px) {
+  #tapahtumat,
+  #tyokalut {
+    width: 80%;
+    font-size: 0.7rem;
+  }
+}
+
+/* On screens that are 785px or less */
+@media screen and (max-width: 785px) {
+  #tapahtumat,
+  #tyokalut {
+    width: 80%;
+    font-size: 0.5rem;
+  }
+}
+/* On screens that are 600px or less */
+@media screen and (max-width: 600px) {
+  #tapahtumat,
+  #tyokalut {
+    width: 80%;
+    font-size: 0.3rem;
+  }
+}
