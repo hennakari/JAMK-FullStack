@@ -24,6 +24,7 @@ import { ChakraProvider } from "@chakra-ui/react";
 import theme from "./theme";
 import Login from "./components/login";
 import useToken from "./components/useToken";
+import Footer from "./components/footer";
 
 
 
@@ -76,6 +77,7 @@ const App = () => {
         <Addtool />
       </Route>
     </div>
+    <Footer />
     </ChakraProvider>
     // {/* </Auth0ProviderWithHistory> */}
   );

@@ -1,5 +1,5 @@
 import React from 'react';
-import { VStack, HStack, SimpleGrid, GridItem, Heading, Text, Center, Divider } from '@chakra-ui/react';
+import { VStack, HStack, SimpleGrid, GridItem, Heading, Text, Center, Divider, Button } from '@chakra-ui/react';
 import Chart from "./chart";
 import { useBreakpointValue } from "@chakra-ui/react";
 
@@ -7,6 +7,7 @@ const ChakraGrid = () => {
     const columns = useBreakpointValue( {sm: 3, md: 6, lg: 9, xl: 12, "2xl": 12 })
     const colSpan = useBreakpointValue( {sm: 6, md: 4, lg: 3, xl: 3 })
     return (
+        
         <VStack w="full" h="full" p={10} spacing={10} alignItems="flex-start">
             <SimpleGrid columns={columns} columnGap={3} rowGap={6} w="full">
                 <GridItem className="ruutu" colSpan={3}>
