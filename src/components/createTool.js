@@ -1,11 +1,10 @@
 import React, { Component } from "react";
 import axios from 'axios';
-import "../form.css"
+import "../css/form.css";
 
   
 
-export default class Addtool extends Component {
-  // Constructor stores the data.
+export default class CreateTool extends Component {
   constructor(props) {
     super(props);
  
@@ -21,8 +20,6 @@ export default class Addtool extends Component {
     };
   }
  
-
-  // These methods will update the state properties.
   onChangeToolName(e) {
     this.setState({
       tool_name: e.target.value,
@@ -41,11 +38,10 @@ export default class Addtool extends Component {
     });
   }
  
-// This function will handle the submission.
+
   onSubmit(e) {
     e.preventDefault();
  
-    // When post request is sent to the create url, axios will add a new record(newtool) to the database.
     const newtool = {
       tool_name: this.state.tool_name,
       tool_hours: this.state.tool_hours,
@@ -56,16 +52,13 @@ export default class Addtool extends Component {
       .post("http://localhost:5000/tool/add", newtool)
       .then((res) => console.log(res.data));
 
- 
-    // We will empty the state after posting the data to the database
+
     this.setState({
       tool_name: "",
       tool_hours: "",
       tool_date: "",
     });
   }
- 
-  // This following section will display the form that takes the input from the user.
   
   render() {
     return (

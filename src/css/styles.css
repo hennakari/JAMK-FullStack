@@ -3,10 +3,6 @@ body {
   margin: auto;
 }
 
-.home {
-  color: blue;
-}
-
 * {
   box-sizing: border-box;
 }
@@ -20,7 +16,7 @@ body {
   margin: 20px;
 }
 
-.ajatus {
+.note {
   font-family: "Allura", cursive;
   font-size: 2rem;
 }

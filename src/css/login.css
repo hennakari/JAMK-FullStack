@@ -7,7 +7,7 @@ content {
   background: #a39dd4;
 }
 
-.form-box {
+.form-box-login {
   width: 60%;
   height: 100vh;
   background: white;
@@ -17,21 +17,29 @@ content {
   text-align: center;
 }
 
-.form-box label {
+.form-box-login label {
   font-size: 1.2rem;
   color: #5870ce;
   font-weight: bolder;
 }
 
-.form-box h3 {
-  font-size: 4vh;
+.form-box-login h3 {
+  font-size: 3vh;
   font-weight: bold;
   text-align: center;
   color: #5870ce;
   margin: 0 0 3vh 0;
 }
 
-.form-box input {
+.form-box-login h2 {
+  font-size: 2.5vh;
+  font-weight: bold;
+  text-align: center;
+  color: #5870ce;
+  margin: 0 0 3vh 0;
+}
+
+.form-box-login input {
   display: block;
   width: 50%;
   padding: 0.5rem 0.8rem 0.5rem 0.8rem;
@@ -41,7 +49,8 @@ content {
   margin: 0.5rem auto;
 }
 
-.nextBtn {
+.nextBtn-login {
+  font-family: "Montserrat", sans-serif;
   display: inline-block;
   width: 50%;
   height: 3rem;
@@ -57,7 +66,7 @@ content {
   margin-top: 1rem;
 }
 
-.nextBtn:hover {
+.nextBtn-login:hover {
   background-color: #d4ea75;
   color: #4d4c4b;
   font-weight: bold;

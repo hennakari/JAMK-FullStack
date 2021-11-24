@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../login.css';
+import '../css/login.css';
 import PropTypes from 'prop-types';
 
 async function loginUser(credentials) {
@@ -28,19 +28,21 @@ export default function Login({ setToken }) {
 
   return(
     <div className="content">
-    <div className="form-box">
-      <h3>Please Log In</h3>
+    <div className="form-box-login">
+      <h3>Tervetuloa tutkimaan Hennan Harkka-Dashboardia!</h3>
+      <br></br>
+      <h2>Ole hyvä ja rekisteröidy ensin</h2>
       <form onSubmit={handleSubmit}>
         <label>
-          <p>Username</p>
+          <p>Käyttäjätunnus</p>
           <input type="text" onChange={e => setUserName(e.target.value)} />
         </label>
         <label>
-          <p>Password</p>
+          <p>Salasana</p>
           <input type="password" onChange={e => setPassword(e.target.value)} />
         </label>
         <div>
-          <button className="nextBtn" type="submit">Submit</button>
+          <button className="nextBtn-login" type="submit">Lähetä</button>
         </div>
       </form>
     </div>

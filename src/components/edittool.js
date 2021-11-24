@@ -1,10 +1,9 @@
 import React, { Component } from "react";
 import axios from 'axios';
 import { withRouter } from "react-router";
-import "../form.css"
+import "../css/form.css";
  
 class EditTool extends Component {
-  // Constructor stores the data.
   constructor(props) {
     super(props);
  
@@ -20,7 +19,7 @@ class EditTool extends Component {
       tools: [],
     };
   }
-  // This will get the record based on the id from the database.
+
   componentDidMount() {
     axios
       .get("http://localhost:5000/tool/" + this.props.match.params.id)
@@ -35,8 +34,7 @@ class EditTool extends Component {
         console.log(error);
       });
   }
- 
-  // These methods will update the state properties.
+
   onChangeToolName(e) {
     this.setState({
       tool_name: e.target.value,
@@ -55,7 +53,6 @@ class EditTool extends Component {
     });
   }
  
-  // This function will handle the submission.
   onSubmit(e) {
     e.preventDefault();
     const newEditedtool = {
@@ -64,8 +61,7 @@ class EditTool extends Component {
       tool_date: this.state.tool_date,
     };
     console.log(newEditedtool);
- 
-    // This will send a post request to update the data in the database.
+
     axios
       .post(
         "http://localhost:5000/update/tool/" + this.props.match.params.id,
@@ -73,10 +69,9 @@ class EditTool extends Component {
       )
       .then((res) => console.log(res.data));
  
-    this.props.history.push("/tools");
+    this.props.history.push("/toolList");
   }
- 
-  // This following section will display the update-form that takes the input from the user to update the data.
+
   render() {
     return (
       <div className="content">

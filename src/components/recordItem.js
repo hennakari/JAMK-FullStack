@@ -7,7 +7,6 @@ const Note = (props) => (
   <div>{props.record.diary_note}</div>
 );
 
-
 export default class RecordItem extends Component {
   
   constructor(props) {
@@ -39,10 +38,9 @@ export default class RecordItem extends Component {
 
   render() {
     let myArray = this.recordNote();
-    console.log(myArray);
     return (
       <div>
-        <h4><RandomStrings muuttuja={myArray} /></h4>
+        <h4><RandomStrings array={myArray} /></h4>
       </div>
     );
   }

@@ -1,16 +1,14 @@
-import React, {useState} from "react";
-
-// To define the different routes of our application
+import React from "react";
 import { Route } from "react-router-dom";
 
-import Navbar from "./components/newnavbar";
+import Navbar from "./components/navbar";
 import Edit from "./components/edit";
 import Create from "./components/create";
 import RecordList from "./components/recordList";
-import EditTool from "./components/edittool";
-import Addtool from "./components/addtool";
+import EditTool from "./components/editTool";
+import CreateTool from "./components/createTool";
 import ToolList from "./components/toolList";
-import ChakraGridPage from "./components/chakra";
+import Dashboard from "./components/dashboard";
 import { ChakraProvider } from "@chakra-ui/react";
 import theme from "./theme";
 import Login from "./components/login";
@@ -19,36 +17,33 @@ import Footer from "./components/footer";
 
 const App = () => {
   const { token, setToken } = useToken();
-
   if(!token) {
     return <Login setToken={setToken} />
   }
-
   return (
   <ChakraProvider theme={theme}>
     <div>
       <Navbar />
       <Route exact path="/">
-        <ChakraGridPage />
+        <Dashboard />
       </Route>
       <Route path="/edit/:id" component={Edit} />
       <Route path="/create">
         <Create />
       </Route>
-      <Route path="/tapahtumat">
+      <Route path="/recordList">
         <RecordList />
       </Route>
-      <Route path="/tools">
+      <Route path="/toolList">
         <ToolList />
       </Route>
-      <Route path="/edittool/:id" component={EditTool} />
-      <Route path="/addtool">
-        <Addtool />
+      <Route path="/editTool/:id" component={EditTool} />
+      <Route path="/createTool">
+        <CreateTool />
       </Route>
     </div>
     <Footer />
     </ChakraProvider>
   );
 };
-
 export default App;

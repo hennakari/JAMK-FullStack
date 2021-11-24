@@ -1,9 +1,8 @@
 import React, { Component } from "react";
-// This will require to npm install axios
 import axios from 'axios';
 import { Link } from "react-router-dom";
 
-import "../report.css"
+import "../css/report.css"
 
 const Record = (props) => (
   <tr>
@@ -18,7 +17,7 @@ const Record = (props) => (
     <td>
       <Link to={"/edit/" + props.record._id}>Edit</Link> |
       <a
-        href="/"
+        href="/recordList"
         onClick={() => {
           props.deleteRecord(props.record._id);
         }}
@@ -31,14 +30,12 @@ const Record = (props) => (
 
 
 export default class RecordList extends Component {
-  // Constructor stores the data retrieved from the database
   constructor(props) {
     super(props);
     this.deleteRecord = this.deleteRecord.bind(this);
     this.state = { records: [] };
   }
 
-  // This method will get the data from the database.
   componentDidMount() {
     axios
       .get("http://localhost:5000/record/")
@@ -50,7 +47,6 @@ export default class RecordList extends Component {
       });
   }
 
-  // This method will delete a record based on the method
   deleteRecord(id) {
     axios.delete("http://localhost:5000/" + id).then((response) => {
       console.log(response.data);
@@ -62,8 +58,7 @@ export default class RecordList extends Component {
   }
 
 
-  // This method will map out the records on the table
-  recordList() {
+   recordList() {
     return this.state.records.map((currentrecord) => {
       return (
         <Record
@@ -75,12 +70,9 @@ export default class RecordList extends Component {
     });
   }
 
-
-  // This following section will display the table with the records of individuals.
   render() {
     return (
       <div>
-        
         <table id="tapahtumat" className="table table-striped">
           <thead>
             <tr>

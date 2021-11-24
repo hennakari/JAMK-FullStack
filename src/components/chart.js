@@ -11,7 +11,7 @@ const Chart = ({chartId, height, width}) => {
     chart.render(chartDiv.current).then(() => setRendered(true)).catch(err => console.log("Error during Charts rendering.", err));
   });
 
-  return <div className="chart" id={"chart"+chartId} ref={chartDiv}/>;
+  return <div className="chart" id={"chart"} ref={chartDiv}/>;
 };
 
 export default Chart;

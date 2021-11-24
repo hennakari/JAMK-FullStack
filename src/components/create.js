@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import axios from 'axios';
-import "../form.css"
+import "../css/form.css";
  
 export default class Create extends Component {
-  // Constructor stores the data.
+ 
   constructor(props) {
     super(props);
  
@@ -30,7 +30,6 @@ export default class Create extends Component {
     };
   }
  
-  // These methods will update the state properties.
   onChangeDiaryDow(e) {
     this.setState({
       diary_dow: e.target.value,
@@ -79,11 +78,9 @@ export default class Create extends Component {
     });
   }
  
-// This function will handle the submission.
   onSubmit(e) {
     e.preventDefault();
  
-    // When post request is sent to the create url, axios will add a new record(newdiary) to the database.
     const newdiary = {
       diary_dow: this.state.diary_dow,
       diary_date: this.state.diary_date,
@@ -99,9 +96,7 @@ export default class Create extends Component {
       .post("http://localhost:5000/record/add", newdiary)
       .then((res) => console.log(res.data));
 
- 
-    // We will empty the state after posting the data to the database
-    this.setState({
+       this.setState({
         diary_dow: "",
         diary_date: "",
         diary_hours: "",
@@ -112,8 +107,7 @@ export default class Create extends Component {
         diary_note: "",
     });
   }
- 
-  // This following section will display the form that takes the input from the user.
+
   render() {
     return (
       <div className="content">
@@ -202,11 +196,13 @@ export default class Create extends Component {
                 </div>
               </div>
             </div>
-              <button
-                type="submit"
-                value="Tallenna tapahtuma"
-                className="nextBtn"
-              >Tallenna tapahtuma</button>
+              
+                <button
+                  type="submit"
+                  value="Tallenna tapahtuma"
+                  className="nextBtn"
+                >Tallenna tapahtuma</button>
+              
           </form>
         </div>
       </div>

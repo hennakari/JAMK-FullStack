@@ -4,7 +4,7 @@ import ChakraGrid from './chakragrid';
 import RecordItem from './recordItem';
 
 
-const ChakraGridPage = () => {
+const Dashboard = () => {
     return (
         <Container maxW="90%" p={4}>
             <Heading align="center" fontSize="4xl">Työssäoppimisjakson raportointia</Heading>
@@ -23,4 +23,4 @@ const ChakraGridPage = () => {
     );
 };
 
-export default ChakraGridPage;
+export default Dashboard;

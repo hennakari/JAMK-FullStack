@@ -6,11 +6,12 @@
 
 .content {
   background: #a39dd4;
+  min-height: calc(100vh - 60px);
 }
 
 .form-box {
   width: 60%;
-  height: 100vh;
+  min-height: calc(100vh - 60px);
   background: white;
   margin: 0vw auto;
   padding: 2rem;

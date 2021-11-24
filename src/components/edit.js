@@ -1,10 +1,9 @@
 import React, { Component } from "react";
 import axios from 'axios';
 import { withRouter } from "react-router";
-import "../form.css"
+import "../css/form.css";
  
 class Edit extends Component {
-  // Constructor stores the data.
   constructor(props) {
     super(props);
  
@@ -30,7 +29,7 @@ class Edit extends Component {
       records: [],
     };
   }
-  // This will get the record based on the id from the database.
+
   componentDidMount() {
     axios
       .get("http://localhost:5000/record/" + this.props.match.params.id)
@@ -51,7 +50,6 @@ class Edit extends Component {
       });
   }
  
-  // These methods will update the state properties.
   onChangeDiaryDow(e) {
     this.setState({
       diary_dow: e.target.value,
@@ -101,7 +99,6 @@ class Edit extends Component {
   }
   
  
-  // This function will handle the submission.
   onSubmit(e) {
     e.preventDefault();
     const newEditedrecord = {
@@ -116,19 +113,17 @@ class Edit extends Component {
     };
     console.log(newEditedrecord);
  
-    // This will send a post request to update the data in the database.
-    axios
+     axios
       .post(
         "http://localhost:5000/update/" + this.props.match.params.id,
         newEditedrecord
       )
       .then((res) => console.log(res.data));
  
-    this.props.history.push("/tapahtumat");
+    this.props.history.push("/recordList");
   }
  
-  // This following section will display the update-form that takes the input from the user to update the data.
-  render() {
+   render() {
     return (
       <div className="content">
         <div className="form-box">
