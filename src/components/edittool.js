@@ -109,7 +109,7 @@ class EditTool extends Component {
             <button
               type="submit"
               value="Päivitä"
-              className="nextBtn">Päivitä muutokset
+              className="nextBtn">Tallenna muutokset
             </button>
 
         </form>
